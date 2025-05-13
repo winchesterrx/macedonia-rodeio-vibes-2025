@@ -34,7 +34,7 @@ const Header = () => {
   return (
     <>
       {/* Countdown Timer in a fixed position */}
-      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-[rgb(11,31,11)]/95 shadow-md backdrop-blur-sm" : "bg-[rgb(11,31,11)]"}`}></header>
+      <div className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-[rgb(11,31,11)]/95 shadow-md backdrop-blur-sm" : "bg-[rgb(11,31,11)]"}`}>
         <CountdownTimer />
       </div>
       
