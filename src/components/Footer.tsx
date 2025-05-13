@@ -1,13 +1,28 @@
 
 import { Facebook, Instagram, Share2, Twitter } from "lucide-react";
 import imperioLogo from "../assets/imperio-logo.png";
+import rodeioLogo from "../assets/logo-rodeio.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-black pt-16 pb-8 text-white">
+    <footer className="bg-rodeo-darker pt-16 pb-8 text-white relative">
+      {/* Rope border top */}
+      <div className="absolute top-0 left-0 w-full h-2 bg-gold-gradient opacity-80"></div>
+      
       <div className="container mx-auto px-4">
+        <div className="flex justify-center mb-10">
+          <img 
+            src={rodeioLogo} 
+            alt="Macedônia Rodeio Show" 
+            className="max-h-28 mx-auto"
+            onError={(e) => {
+              e.currentTarget.src = "https://via.placeholder.com/112x112/0D4F0D/E9AB17?text=RODEIO+SHOW";
+            }}
+          />
+        </div>
+      
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* About */}
           <div>
@@ -24,7 +39,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h3 className="text-xl font-bold mb-4 text-rodeo-gold">Links Rápidos</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               <li>
                 <a href="#home" className="text-gray-400 hover:text-rodeo-gold transition-colors">Home</a>
               </li>
@@ -49,7 +64,7 @@ const Footer = () => {
           {/* Contact */}
           <div>
             <h3 className="text-xl font-bold mb-4 text-rodeo-gold">Contato</h3>
-            <ul className="space-y-2 text-gray-400">
+            <ul className="space-y-3 text-gray-400">
               <li>Parque de Exposições, Macedônia - SP</li>
               <li>+55 17 99779-9982</li>
               <li>contato@macedoniarodeioshow.com.br</li>
@@ -63,7 +78,7 @@ const Footer = () => {
                 className="text-gray-400 hover:text-rodeo-gold transition-colors"
                 aria-label="Instagram"
               >
-                <Instagram size={20} />
+                <Instagram size={24} />
               </a>
               <a 
                 href="https://facebook.com/macedoniarodeioshow" 
@@ -72,7 +87,7 @@ const Footer = () => {
                 className="text-gray-400 hover:text-rodeo-gold transition-colors"
                 aria-label="Facebook"
               >
-                <Facebook size={20} />
+                <Facebook size={24} />
               </a>
               <a 
                 href="https://twitter.com/rodeioshow" 
@@ -81,7 +96,7 @@ const Footer = () => {
                 className="text-gray-400 hover:text-rodeo-gold transition-colors"
                 aria-label="Twitter"
               >
-                <Twitter size={20} />
+                <Twitter size={24} />
               </a>
               <button 
                 onClick={() => {
@@ -96,7 +111,7 @@ const Footer = () => {
                 className="text-gray-400 hover:text-rodeo-gold transition-colors cursor-pointer"
                 aria-label="Compartilhar"
               >
-                <Share2 size={20} />
+                <Share2 size={24} />
               </button>
             </div>
           </div>
@@ -104,20 +119,20 @@ const Footer = () => {
           {/* Imperio Logo */}
           <div>
             <h3 className="text-xl font-bold mb-4 text-rodeo-gold">Patrocínio Master</h3>
-            <div className="bg-black/40 p-6 rounded-lg border border-rodeo-gold/40">
+            <div className="bg-black/70 p-6 rounded-lg border-2 border-rodeo-gold/60 gold-glow">
               <img 
                 src={imperioLogo} 
                 alt="Cervejaria Império" 
                 className="max-h-28 mx-auto"
                 onError={(e) => {
-                  e.currentTarget.src = "https://via.placeholder.com/180x90/000000/D4AF37?text=IMPERIO";
+                  e.currentTarget.src = "https://via.placeholder.com/180x90/000000/E9AB17?text=IMPERIO";
                 }}
               />
             </div>
           </div>
         </div>
         
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t-2 border-rodeo-gold/30 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm mb-4 md:mb-0">
               &copy; {currentYear} Macedônia Rodeio Show. Todos os direitos reservados.

@@ -54,12 +54,14 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				rodeo: {
-					gold: '#D4AF37',
-					darkGold: '#9E7C0A',
-					green: '#1A5D1A',
-					red: '#B22222',
-					dark: '#121212',
-					darker: '#0A0A0A'
+					gold: '#E9AB17',            // Cor da corda dourada na logo
+					darkGold: '#CA8A04',        // Versão mais escura do dourado
+					green: '#0D4F0D',           // Verde escuro da logo
+					darkGreen: '#073107',       // Verde mais escuro para contraste
+					red: '#B22222',             // Mantendo o vermelho
+					dark: '#0A1F0A',           // Fundo verde escuro
+					darker: '#071507',          // Fundo mais escuro
+					white: '#FFFFFF'            // Branco para textos
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -109,21 +111,31 @@ export default {
 					'50%': {
 						transform: 'translateY(-5px)'
 					}
+				},
+				'rope-rotate': {
+					'0%': {
+						transform: 'rotate(0deg)'
+					},
+					'100%': {
+						transform: 'rotate(360deg)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'pulse-gold': 'pulse-gold 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-				'bounce-subtle': 'bounce-subtle 2s infinite'
+				'bounce-subtle': 'bounce-subtle 2s infinite',
+				'rope-spin': 'rope-rotate 30s linear infinite'
 			},
 			backgroundImage: {
-				'rodeo-gradient': 'linear-gradient(to bottom, rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 1))',
-				'gold-gradient': 'linear-gradient(to right, #D4AF37, #FBD786, #D4AF37)',
+				'rodeo-gradient': 'linear-gradient(to bottom, rgba(7, 21, 7, 0.8), rgba(7, 21, 7, 1))',
+				'gold-gradient': 'linear-gradient(to right, #E9AB17, #FFD700, #E9AB17)',
+				'rope-pattern': 'url("data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M0 0h20v20H0V0zm2 2v16h16V2H2z\' fill=\'%23E9AB17\' fill-opacity=\'0.4\'/%3E%3C/svg%3E")',
 			},
 			fontFamily: {
-				rodeo: ['Playfair Display', 'serif'],
-				sans: ['Inter', 'sans-serif']
+				rodeo: ['Western', 'serif'],
+				sans: ['Roboto', 'sans-serif']
 			}
 		}
 	},

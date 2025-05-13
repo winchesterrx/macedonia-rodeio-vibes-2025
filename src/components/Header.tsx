@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import imperioLogo from "../assets/imperio-logo.png";
+import rodeioLogo from "../assets/logo-rodeio.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,30 +54,30 @@ const Header = () => {
           {/* Logo Area */}
           <div className="flex items-center space-x-4">
             <img 
-              src="/src/assets/logo-rodeio.png" 
+              src={rodeioLogo} 
               alt="Macedônia Rodeio Show" 
-              className="h-12 md:h-16"
+              className="h-14 md:h-16"
               onError={(e) => {
-                e.currentTarget.src = "https://via.placeholder.com/160x60/121212/D4AF37?text=RODEIO+SHOW";
+                e.currentTarget.src = "https://via.placeholder.com/160x160/0D4F0D/E9AB17?text=RODEIO+SHOW";
               }}
             />
           </div>
           
           {/* Imperio Beer Logo */}
           <div className="hidden md:flex items-center">
-            <div className="text-sm text-rodeo-gold">Cerveja Oficial:</div>
+            <div className="text-sm text-rodeo-gold font-medium">Cerveja Oficial:</div>
             <img 
               src={imperioLogo} 
               alt="Cervejaria Império" 
-              className="h-8 ml-2"
+              className="h-10 ml-2"
               onError={(e) => {
-                e.currentTarget.src = "https://via.placeholder.com/80x30/121212/D4AF37?text=IMPERIO";
+                e.currentTarget.src = "https://via.placeholder.com/100x40/071507/E9AB17?text=IMPERIO";
               }}
             />
           </div>
 
           {/* Countdown */}
-          <div className="hidden md:flex items-center justify-center bg-rodeo-dark/50 px-4 py-1 rounded-full border border-rodeo-gold">
+          <div className="hidden md:flex items-center justify-center bg-rodeo-dark/80 px-5 py-2 rounded-full border-2 border-rodeo-gold">
             <span className="text-rodeo-gold font-bold animate-pulse-gold">
               FALTAM {daysLeft} DIAS
             </span>
@@ -124,7 +125,7 @@ const Header = () => {
               variant="outline"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              className="border-rodeo-gold text-rodeo-gold hover:bg-rodeo-gold hover:text-black"
+              className="border-rodeo-gold text-rodeo-gold hover:bg-rodeo-gold hover:text-rodeo-dark"
             >
               {isOpen ? <X size={20} /> : <Menu size={20} />}
             </Button>
@@ -134,13 +135,13 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <nav className="md:hidden bg-rodeo-dark border-t border-rodeo-gold/30">
+        <nav className="md:hidden bg-rodeo-dark border-t-2 border-rodeo-gold/50">
           <div className="container mx-auto px-4">
             <ul className="py-4 space-y-3">
               <li>
                 <button 
                   onClick={() => handleNavClick("home")} 
-                  className="w-full text-left py-2 px-4 hover:bg-rodeo-gold/10 rounded-md transition-colors"
+                  className="w-full text-left py-2 px-4 hover:bg-rodeo-gold/20 rounded-md transition-colors"
                 >
                   Home
                 </button>
@@ -148,7 +149,7 @@ const Header = () => {
               <li>
                 <button 
                   onClick={() => handleNavClick("ingressos")} 
-                  className="w-full text-left py-2 px-4 hover:bg-rodeo-gold/10 rounded-md transition-colors"
+                  className="w-full text-left py-2 px-4 hover:bg-rodeo-gold/20 rounded-md transition-colors"
                 >
                   Ingressos
                 </button>
@@ -156,7 +157,7 @@ const Header = () => {
               <li>
                 <button 
                   onClick={() => handleNavClick("programacao")} 
-                  className="w-full text-left py-2 px-4 hover:bg-rodeo-gold/10 rounded-md transition-colors"
+                  className="w-full text-left py-2 px-4 hover:bg-rodeo-gold/20 rounded-md transition-colors"
                 >
                   Programação
                 </button>
@@ -164,7 +165,7 @@ const Header = () => {
               <li>
                 <button 
                   onClick={() => handleNavClick("rancho-balada")} 
-                  className="w-full text-left py-2 px-4 hover:bg-rodeo-gold/10 rounded-md transition-colors"
+                  className="w-full text-left py-2 px-4 hover:bg-rodeo-gold/20 rounded-md transition-colors"
                 >
                   Rancho Balada
                 </button>
@@ -172,7 +173,7 @@ const Header = () => {
               <li>
                 <button 
                   onClick={() => handleNavClick("patrocinadores")} 
-                  className="w-full text-left py-2 px-4 hover:bg-rodeo-gold/10 rounded-md transition-colors"
+                  className="w-full text-left py-2 px-4 hover:bg-rodeo-gold/20 rounded-md transition-colors"
                 >
                   Patrocinadores
                 </button>
@@ -180,7 +181,7 @@ const Header = () => {
               <li>
                 <button 
                   onClick={() => handleNavClick("contato")} 
-                  className="w-full text-left py-2 px-4 hover:bg-rodeo-gold/10 rounded-md transition-colors"
+                  className="w-full text-left py-2 px-4 hover:bg-rodeo-gold/20 rounded-md transition-colors"
                 >
                   Contato
                 </button>
@@ -188,21 +189,21 @@ const Header = () => {
             </ul>
             
             {/* Mobile Countdown */}
-            <div className="my-4 flex items-center justify-center bg-rodeo-dark/70 p-2 rounded-md border border-rodeo-gold/50">
+            <div className="my-4 flex items-center justify-center bg-rodeo-dark/80 p-2 rounded-md border-2 border-rodeo-gold">
               <span className="text-rodeo-gold font-bold text-sm">
                 FALTAM {daysLeft} DIAS
               </span>
             </div>
             
             {/* Mobile Imperio Beer Logo */}
-            <div className="flex items-center justify-center py-3 border-t border-rodeo-gold/30">
-              <div className="text-xs text-rodeo-gold">Cerveja Oficial:</div>
+            <div className="flex items-center justify-center py-3 border-t border-rodeo-gold/50">
+              <div className="text-xs text-rodeo-gold font-medium">Cerveja Oficial:</div>
               <img 
                 src={imperioLogo} 
                 alt="Cervejaria Império" 
-                className="h-6 ml-2"
+                className="h-8 ml-2"
                 onError={(e) => {
-                  e.currentTarget.src = "https://via.placeholder.com/60x24/121212/D4AF37?text=IMPERIO";
+                  e.currentTarget.src = "https://via.placeholder.com/80x32/071507/E9AB17?text=IMPERIO";
                 }}
               />
             </div>
