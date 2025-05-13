@@ -51,14 +51,18 @@ const Header = () => {
             </div>
             
             {/* Imperio Beer Logo */}
-            <div className="hidden md:flex items-center">
-              <div className="text-sm text-rodeo-gold font-medium">Cerveja Oficial:</div>
-              <img 
-                src={imperioLogo} 
-                alt="Cervejaria Império" 
-                className="h-10 ml-2"
-              />
-            </div>
+           <div className="hidden md:flex items-end gap-2 ml-4 h-7">
+  <span className="text-sm text-rodeo-gold font-semibold">
+    Cerveja Oficial:
+  </span>
+  <img 
+    src={imperioLogo} 
+    alt="Cervejaria Império" 
+    className="h-full object-contain"
+  />
+</div>
+
+
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center">
