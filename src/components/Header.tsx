@@ -57,9 +57,6 @@ const Header = () => {
               src={rodeioLogo} 
               alt="Macedônia Rodeio Show" 
               className="h-14 md:h-16"
-              onError={(e) => {
-                e.currentTarget.src = "https://via.placeholder.com/160x160/0D4F0D/E9AB17?text=RODEIO+SHOW";
-              }}
             />
           </div>
           
@@ -70,9 +67,6 @@ const Header = () => {
               src={imperioLogo} 
               alt="Cervejaria Império" 
               className="h-10 ml-2"
-              onError={(e) => {
-                e.currentTarget.src = "https://via.placeholder.com/100x40/071507/E9AB17?text=IMPERIO";
-              }}
             />
           </div>
 
@@ -202,9 +196,6 @@ const Header = () => {
                 src={imperioLogo} 
                 alt="Cervejaria Império" 
                 className="h-8 ml-2"
-                onError={(e) => {
-                  e.currentTarget.src = "https://via.placeholder.com/80x32/071507/E9AB17?text=IMPERIO";
-                }}
               />
             </div>
           </div>

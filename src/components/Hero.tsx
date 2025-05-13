@@ -30,14 +30,12 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 z-10 py-20 mt-16">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="mb-10">
+          <div className="mb-6">
             <img 
               src={rodeioLogo} 
               alt="Macedônia Rodeio Show" 
               className="mx-auto max-w-[280px] md:max-w-[320px] lg:max-w-[380px]"
-              onError={(e) => {
-                e.currentTarget.src = "https://via.placeholder.com/380x380/0D4F0D/E9AB17?text=RODEIO+SHOW";
-              }}
+              style={{ filter: "drop-shadow(0 0 10px rgba(233, 171, 23, 0.7))" }}
             />
           </div>
           
@@ -67,9 +65,6 @@ const Hero = () => {
                 src={imperioLogo} 
                 alt="Cervejaria Império" 
                 className="h-10"
-                onError={(e) => {
-                  e.currentTarget.src = "https://via.placeholder.com/100x40/071507/E9AB17?text=IMPERIO";
-                }}
               />
             </div>
           </div>
