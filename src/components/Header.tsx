@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import imperioLogo from "../assets/imperio-logo.png";
+import imperioLogo from "../assets/imperio-logo-cortado.png";
 import rodeioLogo from "../assets/WhatsApp_Image_2025-05-13_at_10.02.20-removebg-preview.png";
 import novaLogo from "../assets/WhatsApp_Image_2025-05-13_at_10.02.20-removebg-preview.png";
 import CountdownTimer from "./CountdownTimer";
