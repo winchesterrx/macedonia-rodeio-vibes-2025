@@ -111,6 +111,35 @@
     opacity: 0.8;
     z-index: -1;
   }
+
+  /* Adiciona uma animação de pulso suave para o contador */
+  @keyframes pulse-soft {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.03);
+      opacity: 0.9;
+    }
+  }
+  
+  .animate-pulse-soft {
+    animation: pulse-soft 3s infinite ease-in-out;
+  }
+  
+  @keyframes number-change {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2px);
+    }
+  }
+  
+  .animate-number {
+    animation: number-change 1s ease-in-out;
+  }
 }
 
 /* Estilo para botões específicos do rodeio */

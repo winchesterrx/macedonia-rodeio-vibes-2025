@@ -28,7 +28,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-rodeo-dark/90 via-rodeo-dark/95 to-rodeo-darker"></div>
       
       {/* Content */}
-      <div className="container mx-auto px-4 z-10 py-20 mt-16">
+      <div className="container mx-auto px-4 z-10 py-20 mt-24 md:mt-32">
         <div className="max-w-5xl mx-auto text-center">
           <div className="mb-6">
             <img 
