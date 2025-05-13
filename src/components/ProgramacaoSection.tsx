@@ -2,6 +2,7 @@
 import { Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import imperioLogo from "../assets/imperio-logo.png";
+import rodeioLogo from "../assets/logo-rodeio.png";
 
 interface ShowProps {
   name: string;
@@ -78,6 +79,18 @@ const ProgramacaoSection = () => {
                   src={show.image} 
                   alt={show.name} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+              </div>
+              
+              {/* Event logo overlay */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-30 pointer-events-none">
+                <img 
+                  src={rodeioLogo} 
+                  alt="Macedônia Rodeio Show" 
+                  className="w-3/5 opacity-60"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://via.placeholder.com/200x200/071507/E9AB17?text=RODEIO";
+                  }}
                 />
               </div>
               
