@@ -1,9 +1,9 @@
-
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import imperioLogo from "../assets/imperio-logo.png";
-import rodeioLogo from "../assets/logo-rodeio.png";
+import rodeioLogo from "../assets/WhatsApp_Image_2025-05-13_at_10.02.20-removebg-preview.png";
+import novaLogo from "../assets/WhatsApp_Image_2025-05-13_at_10.02.20-removebg-preview.png";
 import CountdownTimer from "./CountdownTimer";
 
 const Header = () => {
@@ -44,7 +44,7 @@ const Header = () => {
             {/* Logo Area */}
             <div className="flex items-center space-x-4">
               <img 
-                src={rodeioLogo} 
+                src={novaLogo} 
                 alt="Macedônia Rodeio Show" 
                 className="h-14 md:h-16"
               />
