@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import imperioLogo from "../assets/imperio-logo-cortado.png";
-import rodeioLogo from "../assets/WhatsApp_Image_2025-05-13_at_10.02.20-removebg-preview.png";
 import novaLogo from "../assets/WhatsApp_Image_2025-05-13_at_10.02.20-removebg-preview.png";
+import cervejaLogo from "../assets/cerveja-oficial.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,18 +43,18 @@ const Header = () => {
               />
             </div>
             
-            {/* Imperio Beer Logo NOVO - alinhado centralizado verticalmente */}
-           <div className="hidden md:flex items-center gap-2 ml-4">
+            {/* Cerveja Oficial centralizado verticalmente e perfeitamente alinhado */}
+            <div className="hidden md:flex items-center gap-3 ml-4 min-w-[230px] justify-center">
               <span
-                className="text-sm text-rodeo-gold font-semibold flex items-center"
+                className="text-sm text-rodeo-gold font-semibold flex items-center whitespace-nowrap"
                 style={{ paddingTop: "2px" }}
               >
                 Cerveja Oficial:
                 <img
-                  src="/lovable-uploads/82dc8f81-9fb7-431b-b059-3cba5cc2dab7.png"
-                  alt="Cervejaria Império"
-                  className="h-8 ml-2 object-contain"
-                  style={{ marginTop: "-2px", maxWidth: "80px" }}
+                  src={cervejaLogo}
+                  alt="Cerveja Oficial"
+                  className="h-8 md:h-9 ml-2 object-contain"
+                  style={{ maxWidth: "80px", marginTop: "-2px" }}
                 />
               </span>
             </div>
@@ -165,14 +164,14 @@ const Header = () => {
                 </li>
               </ul>
               
-              {/* Mobile Imperio Beer Logo NOVO */}
-              <div className="flex items-center justify-center py-3 border-t border-rodeo-gold/50 gap-2">
-                <span className="text-xs text-rodeo-gold font-medium">Cerveja Oficial:</span>
+              {/* Cerveja Oficial mobile bem alinhado */}
+              <div className="flex items-center justify-center py-3 border-t border-rodeo-gold/50 gap-2 min-w-[210px]">
+                <span className="text-xs text-rodeo-gold font-medium whitespace-nowrap">Cerveja Oficial:</span>
                 <img 
-                  src="/lovable-uploads/82dc8f81-9fb7-431b-b059-3cba5cc2dab7.png" 
-                  alt="Cervejaria Império" 
-                  className="h-7 object-contain ml-1"
-                  style={{maxWidth: "63px"}}
+                  src={cervejaLogo}
+                  alt="Cerveja Oficial"
+                  className="h-7 md:h-8 object-contain ml-1"
+                  style={{ maxWidth: "63px" }}
                 />
               </div>
             </div>

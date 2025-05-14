@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import rodeioLogo from "../assets/logo-rodeio.png";
 import CountdownTimer from "./CountdownTimer";
 
+// Novo: importar a logo correta da cerveja
+import cervejaLogo from "../assets/cerveja-oficial.png";
+
 const Hero = () => {
   const scrollToIngressos = () => {
     const element = document.getElementById("ingressos");
@@ -24,19 +27,12 @@ const Hero = () => {
         backgroundColor: "#071507"
       }}
     >
-      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-rodeo-dark/90 via-rodeo-dark/95 to-rodeo-darker"></div>
       
-      {/* Contador de dias EM DESTAQUE acima do logo principal */}
-      <div className="relative z-20 flex justify-center pt-24 md:pt-32 pb-4 animate-fade-in">
-        <CountdownTimer />
-      </div>
-      
-      {/* Content */}
       <div className="container mx-auto px-4 z-10 py-10 md:pt-14 mt-8 lg:mt-20">
-        <div className="max-w-5xl mx-auto text-center">
-          
-          <div className="mb-6">
+        <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
+          {/* Logo principal do evento */}
+          <div className="mb-3 md:mb-5">
             <img 
               src={rodeioLogo} 
               alt="Macedônia Rodeio Show" 
@@ -45,6 +41,12 @@ const Hero = () => {
             />
           </div>
 
+          {/* Contador centralizado abaixo do logo, com margem e destaque sutil */}
+          <div className="w-full flex justify-center mb-4 md:mb-6">
+            <CountdownTimer />
+          </div>
+          
+          {/* Data e separador */}
           <div className="mb-8 inline-block">
             <span className="text-rodeo-gold text-xl md:text-2xl font-bold uppercase tracking-wider">
               05 a 07 de Junho
@@ -63,18 +65,17 @@ const Hero = () => {
           <p className="text-xl md:text-2xl mb-10 text-shadow max-w-2xl mx-auto">
             O rodeio que mais cresce no Brasil. Emoção, festa e tradição em um único lugar.
           </p>
-          
-          <div className="bg-rodeo-dark/70 p-3 mb-8 inline-block rounded-lg border border-rodeo-gold/70 gold-glow">
-            <div className="flex items-center justify-center gap-2">
-              <span className="text-sm text-rodeo-gold font-medium">Cerveja Oficial:</span>
-              {/* Logo nova da cerveja */}
-              <img 
-                src="/lovable-uploads/82dc8f81-9fb7-431b-b059-3cba5cc2dab7.png"
-                alt="Cervejaria Império" 
-                className="h-8 object-contain"
-                style={{maxWidth: "65px"}}
-              />
-            </div>
+
+          {/* Bloco da cerveja oficial centralizado e com alinhamento vertical perfeito */}
+          <div className="bg-rodeo-dark/70 p-3 mb-8 inline-flex items-center rounded-lg border border-rodeo-gold/70 gold-glow gap-3 min-w-[230px] justify-center">
+            <span className="text-sm text-rodeo-gold font-medium whitespace-nowrap">Cerveja Oficial:</span>
+            {/* Logo da cerveja oficial com altura fixa para alinhamento */}
+            <img 
+              src={cervejaLogo}
+              alt="Cervejaria Oficial"
+              className="h-8 md:h-9 object-contain"
+              style={{maxWidth: "80px"}}
+            />
           </div>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mt-2">
