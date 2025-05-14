@@ -20,11 +20,11 @@ const Hero = () => {
       id="home"
       className="min-h-screen relative flex items-center justify-center bg-cover bg-center text-white"
       style={{
-        backgroundImage: `linear-gradient(rgba(7, 21, 7, 0.85), rgba(7, 21, 7, 0.9)), url(${imagemFundo})`,
+        backgroundImage: `linear-gradient(rgba(7, 21, 7, 0.55), rgba(7, 21, 7, 0.7)), url(${imagemFundo})`,
         backgroundColor: "#071507"
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-rodeo-dark/90 via-rodeo-dark/95 to-rodeo-darker"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-rodeo-dark/70 via-rodeo-dark/85 to-rodeo-darker"></div>
 
       <div className="container mx-auto px-4 z-10 py-10 md:pt-14 mt-8 lg:mt-20">
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
