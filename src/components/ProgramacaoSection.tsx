@@ -47,14 +47,15 @@ const ProgramacaoSection = () => {
             Confira as grandes atrações que vão agitar as noites do Macedônia Rodeio Show 2025
           </p>
           
-          {/* Novo alinhamento da logo da cerveja */}
-          <div className="mt-6 flex items-center justify-center gap-2">
-            <span className="text-sm text-rodeo-gold font-medium">Cerveja Oficial:</span>
-            <img src="/lovable-uploads/82dc8f81-9fb7-431b-b059-3cba5cc2dab7.png" alt="Cervejaria Império" className="h-8 object-contain" style={{
-            maxWidth: "63px"
-          }} />
-          </div>
-        </div>
+          <div className="flex items-center justify-center gap-2 mt-6">
+  <span className="text-sm text-rodeo-gold font-medium">Cerveja Oficial:</span>
+  <img
+    src="/src/assets/imperio-logo.png"
+    alt="Cerveja Império"
+    className="h-6 object-contain"
+  />
+</div>
+
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {shows.map((show, index) => <div key={index} className="group relative overflow-hidden rounded-xl border-2 border-rodeo-gold/30">
