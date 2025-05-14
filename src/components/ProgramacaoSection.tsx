@@ -1,6 +1,6 @@
 import { Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import novaLogoImperio from "../assets/nova-logo-imperio.png";
+import novaLogoImperio from "../assets/logo-certa.png";
 import rodeioLogo from "../assets/logo-rodeio.png";
 
 interface ShowProps {
