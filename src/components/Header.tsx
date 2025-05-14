@@ -3,7 +3,7 @@ import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 // Trocar logo para a nova recebida e garantir alinhamento
 import rodeioLogo from "/lovable-uploads/03276840-4600-4c77-9175-778a068c5bab.png";
-import cervejaLogo from "../assets/cerveja-oficial.png";
+import cervejaLogo from "../assets/logo-sfundo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
