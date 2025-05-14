@@ -1,7 +1,9 @@
+
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import novaLogo from "../assets/WhatsApp_Image_2025-05-13_at_10.02.20-removebg-preview.png";
+// Corrigir caminho para cerveja oficial
 import cervejaLogo from "../assets/cerveja-oficial.png";
 
 const Header = () => {
@@ -41,22 +43,16 @@ const Header = () => {
                 alt="Macedônia Rodeio Show" 
                 className="h-14 md:h-16"
               />
-            </div>
-            
-            {/* Cerveja Oficial centralizado verticalmente e perfeitamente alinhado */}
-            <div className="hidden md:flex items-center gap-3 ml-4 min-w-[230px] justify-center">
-              <span
-                className="text-sm text-rodeo-gold font-semibold flex items-center whitespace-nowrap"
-                style={{ paddingTop: "2px" }}
-              >
-                Cerveja Oficial:
+              {/* ALINHAR BLOCO DA CERVEJA COM A LOGO – APENAS NA DESKTOP */}
+              <div className="hidden md:flex flex-row items-center gap-2 bg-rodeo-dark/70 rounded-lg border border-rodeo-gold/70 gold-glow px-4 py-2 min-w-[210px] max-w-[330px] ml-4">
+                <span className="text-sm text-rodeo-gold font-semibold whitespace-nowrap">Cerveja Oficial:</span>
                 <img
                   src={cervejaLogo}
                   alt="Cerveja Oficial"
                   className="h-8 md:h-9 ml-2 object-contain"
-                  style={{ maxWidth: "80px", marginTop: "-2px" }}
+                  style={{ maxWidth: "80px", marginTop: "0px" }}
                 />
-              </span>
+              </div>
             </div>
 
             {/* Desktop Navigation */}
@@ -171,7 +167,7 @@ const Header = () => {
                   src={cervejaLogo}
                   alt="Cerveja Oficial"
                   className="h-7 md:h-8 object-contain ml-1"
-                  style={{ maxWidth: "63px" }}
+                  style={{ maxWidth: "63px", marginTop: "0px" }}
                 />
               </div>
             </div>

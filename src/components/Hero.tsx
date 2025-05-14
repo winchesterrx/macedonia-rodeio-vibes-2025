@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import rodeioLogo from "../assets/logo-rodeio.png";
 import CountdownTimer from "./CountdownTimer";
 
-// Novo: importar a logo correta da cerveja
+// Corrigir caminho da logo da cerveja
 import cervejaLogo from "../assets/cerveja-oficial.png";
 
 const Hero = () => {
@@ -32,17 +32,27 @@ const Hero = () => {
       <div className="container mx-auto px-4 z-10 py-10 md:pt-14 mt-8 lg:mt-20">
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
           {/* Logo principal do evento */}
-          <div className="mb-3 md:mb-5">
+          <div className="mb-4 md:mb-6 flex flex-col items-center gap-4 w-full">
             <img 
               src={rodeioLogo} 
               alt="Macedônia Rodeio Show" 
-              className="mx-auto max-w-[280px] md:max-w-[320px] lg:max-w-[380px]"
+              className="mx-auto max-w-[260px] md:max-w-[320px] lg:max-w-[380px]"
               style={{ filter: "drop-shadow(0 0 10px rgba(233, 171, 23, 0.7))" }}
             />
+            {/* ALINHAR BLOCO DA CERVEJA COM A LOGO */}
+            <div className="flex flex-row items-center justify-center gap-2 bg-rodeo-dark/70 rounded-lg border border-rodeo-gold/70 gold-glow px-4 py-2 min-w-[210px] max-w-[330px] mx-auto">
+              <span className="text-sm text-rodeo-gold font-semibold whitespace-nowrap">Cerveja Oficial:</span>
+              <img 
+                src={cervejaLogo}
+                alt="Cervejaria Oficial"
+                className="h-8 md:h-9 object-contain ml-2"
+                style={{maxWidth: "80px", marginTop: "0px"}}
+              />
+            </div>
           </div>
 
-          {/* Contador centralizado abaixo do logo, com margem e destaque sutil */}
-          <div className="w-full flex justify-center mb-4 md:mb-6">
+          {/* CONTADOR MAIS EVIDENTE ABAIXO DO BLOCO LOGO+CERVEJA */}
+          <div className="w-full flex justify-center mt-4 mb-6">
             <CountdownTimer />
           </div>
           
@@ -66,17 +76,7 @@ const Hero = () => {
             O rodeio que mais cresce no Brasil. Emoção, festa e tradição em um único lugar.
           </p>
 
-          {/* Bloco da cerveja oficial centralizado e com alinhamento vertical perfeito */}
-          <div className="bg-rodeo-dark/70 p-3 mb-8 inline-flex items-center rounded-lg border border-rodeo-gold/70 gold-glow gap-3 min-w-[230px] justify-center">
-            <span className="text-sm text-rodeo-gold font-medium whitespace-nowrap">Cerveja Oficial:</span>
-            {/* Logo da cerveja oficial com altura fixa para alinhamento */}
-            <img 
-              src={cervejaLogo}
-              alt="Cervejaria Oficial"
-              className="h-8 md:h-9 object-contain"
-              style={{maxWidth: "80px"}}
-            />
-          </div>
+          {/* REMOVER SEGUNDO BLOCO DA CERVEJA, JÁ QUE ESTÁ JUNTO DA LOGO */}
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mt-2">
             <Button 
