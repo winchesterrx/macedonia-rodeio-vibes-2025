@@ -175,15 +175,7 @@ const Header = () => {
         )}
         
         {/* Fixed WhatsApp Button */}
-        <a 
-          href="https://wa.me/5517997799982" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="fixed bottom-16 right-6 z-50 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-colors gold-glow"
-          aria-label="Contato via WhatsApp"
-        >
-          <Phone size={24} />
-        </a>
+        
       </header>
     </>
   );
