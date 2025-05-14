@@ -1,26 +1,17 @@
-
 import { Facebook, Instagram, Share2, Twitter } from "lucide-react";
 import imperioLogo from "../assets/imperio-logo.png";
 import rodeioLogo from "../assets/logo-rodeio.png";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
-  return (
-    <footer className="bg-rodeo-darker pt-16 pb-8 text-white relative">
+  return <footer className="bg-rodeo-darker pt-16 pb-8 text-white relative">
       {/* Rope border top */}
       <div className="absolute top-0 left-0 w-full h-2 bg-gold-gradient opacity-80"></div>
       
       <div className="container mx-auto px-4">
         <div className="flex justify-center mb-10">
-          <img 
-            src={rodeioLogo} 
-            alt="Macedônia Rodeio Show" 
-            className="max-h-28 mx-auto"
-            onError={(e) => {
-              e.currentTarget.src = "https://via.placeholder.com/112x112/0D4F0D/E9AB17?text=RODEIO+SHOW";
-            }}
-          />
+          <img src={rodeioLogo} alt="Macedônia Rodeio Show" className="max-h-28 mx-auto" onError={e => {
+          e.currentTarget.src = "https://via.placeholder.com/112x112/0D4F0D/E9AB17?text=RODEIO+SHOW";
+        }} />
         </div>
       
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -71,46 +62,24 @@ const Footer = () => {
             </ul>
             
             <div className="mt-6 flex space-x-4">
-              <a 
-                href="https://instagram.com/macedoniarodeioshow2025" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-rodeo-gold transition-colors"
-                aria-label="Instagram"
-              >
+              <a href="https://instagram.com/macedoniarodeioshow2025" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rodeo-gold transition-colors" aria-label="Instagram">
                 <Instagram size={24} />
               </a>
-              <a 
-                href="https://facebook.com/macedoniarodeioshow" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-rodeo-gold transition-colors"
-                aria-label="Facebook"
-              >
+              <a href="https://facebook.com/macedoniarodeioshow" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rodeo-gold transition-colors" aria-label="Facebook">
                 <Facebook size={24} />
               </a>
-              <a 
-                href="https://twitter.com/rodeioshow" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-rodeo-gold transition-colors"
-                aria-label="Twitter"
-              >
+              <a href="https://twitter.com/rodeioshow" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-rodeo-gold transition-colors" aria-label="Twitter">
                 <Twitter size={24} />
               </a>
-              <button 
-                onClick={() => {
-                  if (navigator.share) {
-                    navigator.share({
-                      title: 'Macedônia Rodeio Show 2025',
-                      text: 'Vem pro maior rodeio da região! Dias 05, 06 e 07 de Junho de 2025.',
-                      url: window.location.href,
-                    })
-                  }
-                }}
-                className="text-gray-400 hover:text-rodeo-gold transition-colors cursor-pointer"
-                aria-label="Compartilhar"
-              >
+              <button onClick={() => {
+              if (navigator.share) {
+                navigator.share({
+                  title: 'Macedônia Rodeio Show 2025',
+                  text: 'Vem pro maior rodeio da região! Dias 05, 06 e 07 de Junho de 2025.',
+                  url: window.location.href
+                });
+              }
+            }} className="text-gray-400 hover:text-rodeo-gold transition-colors cursor-pointer" aria-label="Compartilhar">
                 <Share2 size={24} />
               </button>
             </div>
@@ -120,14 +89,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 text-rodeo-gold">Patrocínio Master</h3>
             <div className="bg-black/70 p-6 rounded-lg border-2 border-rodeo-gold/60 gold-glow">
-              <img 
-                src={imperioLogo} 
-                alt="Cervejaria Império" 
-                className="max-h-28 mx-auto"
-                onError={(e) => {
-                  e.currentTarget.src = "https://via.placeholder.com/180x90/000000/E9AB17?text=IMPERIO";
-                }}
-              />
+              
             </div>
           </div>
         </div>
@@ -149,8 +111,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
