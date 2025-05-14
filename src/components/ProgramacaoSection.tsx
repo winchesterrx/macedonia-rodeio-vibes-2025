@@ -1,7 +1,7 @@
 import { Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoCerveja from "../assets/logo-sfundo.png";
-import logoApoio from "../assets/apoio-sfundo.png";
+import logoApoio from "../assets/apoio-sfundo.png"; // <-- nome correto, com "a" minúsculo
 import rodeioLogo from "../assets/logo-rodeio.png";
 
 interface ShowProps {
@@ -57,7 +57,7 @@ const ProgramacaoSection = () => {
             Confira as grandes atrações que vão agitar as noites do Macedônia Rodeio Show 2025
           </p>
 
-          {/* Logo central Cerveja Oficial */}
+          {/* Logo Cerveja Oficial */}
           <div className="flex justify-center mt-6">
             <img
               src={logoCerveja}
@@ -77,6 +77,7 @@ const ProgramacaoSection = () => {
               key={index}
               className="group relative overflow-hidden rounded-xl border-2 border-rodeo-gold/30"
             >
+              {/* Imagem do show */}
               <div className="h-96 overflow-hidden">
                 <img
                   src={show.image}
@@ -85,6 +86,7 @@ const ProgramacaoSection = () => {
                 />
               </div>
 
+              {/* Overlay logo do evento */}
               <div className="absolute inset-0 flex items-center justify-center opacity-30 pointer-events-none">
                 <img
                   src={rodeioLogo}
@@ -96,8 +98,10 @@ const ProgramacaoSection = () => {
                 />
               </div>
 
+              {/* Gradiente */}
               <div className="absolute inset-0 bg-gradient-to-t from-rodeo-dark via-rodeo-dark/80 to-transparent"></div>
 
+              {/* Conteúdo do card */}
               <div className="absolute bottom-0 left-0 w-full p-6">
                 <div className="flex items-center mb-3">
                   <Calendar size={18} className="text-rodeo-gold mr-2" />
@@ -116,7 +120,7 @@ const ProgramacaoSection = () => {
                 </Button>
               </div>
 
-              {/* Logo apoio sem texto */}
+              {/* Logo de apoio sem texto */}
               <div className="absolute top-4 right-4 bg-black/80 py-1 px-3 rounded-full flex items-center border border-rodeo-gold/30">
                 <img
                   src={logoApoio}
