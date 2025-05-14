@@ -59,15 +59,18 @@ const ProgramacaoSection = () => {
 
           {/* Bloco Alinhado de Cerveja Oficial */}
      <div className="flex justify-center mt-6">
-  <div className="inline-flex items-center gap-2 bg-rodeo-dark px-4 py-2 rounded-md border border-yellow-600">
-    <span className="text-sm text-rodeo-gold font-medium">Cerveja Oficial:</span>
+  <div className="flex items-center gap-2 bg-rodeo-dark px-4 py-[6px] rounded-md border border-yellow-600 leading-none">
+    <span className="text-sm text-rodeo-gold font-medium leading-none whitespace-nowrap">
+      Cerveja Oficial:
+    </span>
     <img
       src={imperioLogo}
       alt="Cerveja Império"
-      className="h-[18px] object-contain"
+      className="h-[20px] mt-[1px] object-contain"
     />
   </div>
 </div>
+
 
 
 
