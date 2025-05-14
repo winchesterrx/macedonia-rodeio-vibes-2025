@@ -1,8 +1,11 @@
 import { Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoCerveja from "../assets/logo-sfundo.png";
-import logoApoio from "../assets/apoio-sfundo.png"; // <-- nome correto, com "a" minúsculo
+import logoApoio from "../assets/apoio-sfundo.png";
 import rodeioLogo from "../assets/logo-rodeio.png";
+import brunoImage from "../assets/bruno-barreto.jpeg";
+import daniloImage from "../assets/danilo-davi.jpeg";
+import guilhermeImage from "../assets/guilherme-benuto.jpeg";
 
 interface ShowProps {
   name: string;
@@ -15,19 +18,19 @@ const ProgramacaoSection = () => {
   const shows: ShowProps[] = [
     {
       name: "Bruno & Barretto",
-      image: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=2070",
+      image: brunoImage,
       date: "05/06/2025",
       day: "Quinta-feira"
     },
     {
       name: "Danilo & Davi",
-      image: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=2070",
+      image: daniloImage,
       date: "06/06/2025",
       day: "Sexta-feira"
     },
     {
       name: "Guilherme & Benuto",
-      image: "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?q=80&w=2070",
+      image: guilhermeImage,
       date: "07/06/2025",
       day: "Sábado"
     }
@@ -57,16 +60,12 @@ const ProgramacaoSection = () => {
             Confira as grandes atrações que vão agitar as noites do Macedônia Rodeio Show 2025
           </p>
 
-          {/* Logo Cerveja Oficial */}
           <div className="flex justify-center mt-6">
             <img
               src={logoCerveja}
               alt="Cerveja Oficial: Império"
               className="h-[48px]"
-              style={{
-                backgroundColor: "transparent",
-                mixBlendMode: "normal"
-              }}
+              style={{ backgroundColor: "transparent", mixBlendMode: "normal" }}
             />
           </div>
         </div>
@@ -77,7 +76,6 @@ const ProgramacaoSection = () => {
               key={index}
               className="group relative overflow-hidden rounded-xl border-2 border-rodeo-gold/30"
             >
-              {/* Imagem do show */}
               <div className="h-96 overflow-hidden">
                 <img
                   src={show.image}
@@ -86,7 +84,6 @@ const ProgramacaoSection = () => {
                 />
               </div>
 
-              {/* Overlay logo do evento */}
               <div className="absolute inset-0 flex items-center justify-center opacity-30 pointer-events-none">
                 <img
                   src={rodeioLogo}
@@ -98,10 +95,8 @@ const ProgramacaoSection = () => {
                 />
               </div>
 
-              {/* Gradiente */}
               <div className="absolute inset-0 bg-gradient-to-t from-rodeo-dark via-rodeo-dark/80 to-transparent"></div>
 
-              {/* Conteúdo do card */}
               <div className="absolute bottom-0 left-0 w-full p-6">
                 <div className="flex items-center mb-3">
                   <Calendar size={18} className="text-rodeo-gold mr-2" />
@@ -120,7 +115,6 @@ const ProgramacaoSection = () => {
                 </Button>
               </div>
 
-              {/* Logo de apoio sem texto */}
               <div className="absolute top-4 right-4 bg-black/80 py-1 px-3 rounded-full flex items-center border border-rodeo-gold/30">
                 <img
                   src={logoApoio}
