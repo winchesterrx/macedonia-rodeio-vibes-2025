@@ -1,8 +1,8 @@
 
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import imperioLogo from "../assets/imperio-logo.png";
 import rodeioLogo from "../assets/logo-rodeio.png";
+import CountdownTimer from "./CountdownTimer";
 
 const Hero = () => {
   const scrollToIngressos = () => {
@@ -27,9 +27,15 @@ const Hero = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-rodeo-dark/90 via-rodeo-dark/95 to-rodeo-darker"></div>
       
+      {/* Contador de dias EM DESTAQUE acima do logo principal */}
+      <div className="relative z-20 flex justify-center pt-24 md:pt-32 pb-4 animate-fade-in">
+        <CountdownTimer />
+      </div>
+      
       {/* Content */}
-      <div className="container mx-auto px-4 z-10 py-20 mt-24 md:mt-32">
+      <div className="container mx-auto px-4 z-10 py-10 md:pt-14 mt-8 lg:mt-20">
         <div className="max-w-5xl mx-auto text-center">
+          
           <div className="mb-6">
             <img 
               src={rodeioLogo} 
@@ -38,7 +44,7 @@ const Hero = () => {
               style={{ filter: "drop-shadow(0 0 10px rgba(233, 171, 23, 0.7))" }}
             />
           </div>
-          
+
           <div className="mb-8 inline-block">
             <span className="text-rodeo-gold text-xl md:text-2xl font-bold uppercase tracking-wider">
               05 a 07 de Junho
@@ -59,12 +65,14 @@ const Hero = () => {
           </p>
           
           <div className="bg-rodeo-dark/70 p-3 mb-8 inline-block rounded-lg border border-rodeo-gold/70 gold-glow">
-            <div className="flex items-center justify-center">
-              <span className="text-sm text-rodeo-gold mr-3 font-medium">Cerveja Oficial:</span>
+            <div className="flex items-center justify-center gap-2">
+              <span className="text-sm text-rodeo-gold font-medium">Cerveja Oficial:</span>
+              {/* Logo nova da cerveja */}
               <img 
-                src={imperioLogo} 
+                src="/lovable-uploads/82dc8f81-9fb7-431b-b059-3cba5cc2dab7.png"
                 alt="Cervejaria Império" 
-                className="h-10"
+                className="h-8 object-contain"
+                style={{maxWidth: "65px"}}
               />
             </div>
           </div>

@@ -17,50 +17,51 @@ const CountdownTimer = () => {
   });
 
   useEffect(() => {
-    const eventDate = new Date("June 5, 2025").getTime();
-    
+    const eventDate = new Date("June 5, 2025 20:00:00").getTime();
     const updateCounter = () => {
       const now = new Date().getTime();
-      const timeLeft = eventDate - now;
-      
-      if (timeLeft > 0) {
-        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-        
+      const diff = eventDate - now;
+      if (diff > 0) {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
         setTimeLeft({ days, hours, minutes, seconds });
+      } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       }
     };
 
     updateCounter();
-    const interval = setInterval(updateCounter, 1000); // Update every second
-    
+    const interval = setInterval(updateCounter, 1000);
+
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="bg-rodeo-dark/80 px-4 py-3 rounded-lg border-2 border-rodeo-gold gold-glow text-center">
-      <div className="text-sm text-rodeo-gold font-bold mb-1">MACEDÔNIA RODEIO SHOW</div>
-      <div className="flex justify-center space-x-3 md:space-x-4">
+    <div className="bg-rodeo-dark border-2 border-rodeo-gold rounded-xl px-8 py-4 md:px-12 md:py-5 gold-glow shadow-lg flex flex-col items-center max-w-xl mx-auto">
+      <div className="text-base md:text-lg text-rodeo-gold font-bold mb-1 tracking-wide uppercase animate-pulse-soft">
+        Contagem regressiva para o evento
+      </div>
+      <div className="flex justify-center items-center gap-3 md:gap-6">
         <div className="flex flex-col items-center">
-          <div className="text-2xl md:text-3xl font-bold text-white">{timeLeft.days}</div>
-          <div className="text-xs md:text-sm text-rodeo-gold">dias</div>
+          <span className="text-3xl md:text-4xl font-extrabold text-rodeo-gold animate-number drop-shadow-lg">{timeLeft.days}</span>
+          <span className="text-xs md:text-sm text-rodeo-gold/80 font-medium uppercase">dias</span>
         </div>
-        <div className="text-rodeo-gold text-2xl font-bold">:</div>
+        <span className="text-rodeo-gold text-3xl font-bold">:</span>
         <div className="flex flex-col items-center">
-          <div className="text-2xl md:text-3xl font-bold text-white">{timeLeft.hours}</div>
-          <div className="text-xs md:text-sm text-rodeo-gold">horas</div>
+          <span className="text-3xl md:text-4xl font-extrabold text-rodeo-gold animate-number drop-shadow-lg">{String(timeLeft.hours).padStart(2, "0")}</span>
+          <span className="text-xs md:text-sm text-rodeo-gold/80 font-medium uppercase">h</span>
         </div>
-        <div className="text-rodeo-gold text-2xl font-bold">:</div>
+        <span className="text-rodeo-gold text-3xl font-bold">:</span>
         <div className="flex flex-col items-center">
-          <div className="text-2xl md:text-3xl font-bold text-white">{timeLeft.minutes}</div>
-          <div className="text-xs md:text-sm text-rodeo-gold">min</div>
+          <span className="text-3xl md:text-4xl font-extrabold text-rodeo-gold animate-number drop-shadow-lg">{String(timeLeft.minutes).padStart(2, "0")}</span>
+          <span className="text-xs md:text-sm text-rodeo-gold/80 font-medium uppercase">min</span>
         </div>
-        <div className="text-rodeo-gold text-2xl font-bold">:</div>
+        <span className="text-rodeo-gold text-3xl font-bold">:</span>
         <div className="flex flex-col items-center">
-          <div className="text-2xl md:text-3xl font-bold text-white">{timeLeft.seconds}</div>
-          <div className="text-xs md:text-sm text-rodeo-gold">seg</div>
+          <span className="text-3xl md:text-4xl font-extrabold text-rodeo-gold animate-number drop-shadow-lg">{String(timeLeft.seconds).padStart(2, "0")}</span>
+          <span className="text-xs md:text-sm text-rodeo-gold/80 font-medium uppercase">seg</span>
         </div>
       </div>
     </div>

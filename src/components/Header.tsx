@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import imperioLogo from "../assets/imperio-logo-cortado.png";
 import rodeioLogo from "../assets/WhatsApp_Image_2025-05-13_at_10.02.20-removebg-preview.png";
 import novaLogo from "../assets/WhatsApp_Image_2025-05-13_at_10.02.20-removebg-preview.png";
-import CountdownTimer from "./CountdownTimer";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,11 +32,6 @@ const Header = () => {
 
   return (
     <>
-      {/* Countdown Timer in a fixed position */}
-      <div className="fixed top-24 md:top-28 left-1/2 transform -translate-x-1/2 z-30 w-11/12 md:w-auto">
-        <CountdownTimer />
-      </div>
-      
       <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-rodeo-darker/95 shadow-md backdrop-blur-sm" : "bg-transparent"}`}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-3 flex items-center justify-between">
@@ -50,24 +44,21 @@ const Header = () => {
               />
             </div>
             
-            {/* Imperio Beer Logo */}
+            {/* Imperio Beer Logo NOVO - alinhado centralizado verticalmente */}
            <div className="hidden md:flex items-center gap-2 ml-4">
-  <span
-    className="text-sm text-rodeo-gold font-semibold"
-    style={{ paddingTop: "2px" }}
-  >
-    Cerveja Oficial:
-  </span>
-  <img
-    src={imperioLogo}
-    alt="Cervejaria Império"
-    className="h-6 md:h-7 object-contain"
-    style={{ marginTop: "-1px" }}
-  />
-</div>
-
-
-
+              <span
+                className="text-sm text-rodeo-gold font-semibold flex items-center"
+                style={{ paddingTop: "2px" }}
+              >
+                Cerveja Oficial:
+                <img
+                  src="/lovable-uploads/82dc8f81-9fb7-431b-b059-3cba5cc2dab7.png"
+                  alt="Cervejaria Império"
+                  className="h-8 ml-2 object-contain"
+                  style={{ marginTop: "-2px", maxWidth: "80px" }}
+                />
+              </span>
+            </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center">
@@ -174,13 +165,14 @@ const Header = () => {
                 </li>
               </ul>
               
-              {/* Mobile Imperio Beer Logo */}
-              <div className="flex items-center justify-center py-3 border-t border-rodeo-gold/50">
-                <div className="text-xs text-rodeo-gold font-medium">Cerveja Oficial:</div>
+              {/* Mobile Imperio Beer Logo NOVO */}
+              <div className="flex items-center justify-center py-3 border-t border-rodeo-gold/50 gap-2">
+                <span className="text-xs text-rodeo-gold font-medium">Cerveja Oficial:</span>
                 <img 
-                  src={imperioLogo} 
+                  src="/lovable-uploads/82dc8f81-9fb7-431b-b059-3cba5cc2dab7.png" 
                   alt="Cervejaria Império" 
-                  className="h-8 ml-2"
+                  className="h-7 object-contain ml-1"
+                  style={{maxWidth: "63px"}}
                 />
               </div>
             </div>

@@ -1,7 +1,7 @@
 
 import { Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import imperioLogo from "../assets/imperio-logo.png";
+// import imperioLogo from "../assets/imperio-logo.png";
 import rodeioLogo from "../assets/logo-rodeio.png";
 
 interface ShowProps {
@@ -57,15 +57,14 @@ const ProgramacaoSection = () => {
             Confira as grandes atrações que vão agitar as noites do Macedônia Rodeio Show 2025
           </p>
           
-          <div className="mt-6 flex items-center justify-center">
-            <span className="text-sm text-rodeo-gold mr-2 font-medium">Cerveja Oficial:</span>
+          {/* Novo alinhamento da logo da cerveja */}
+          <div className="mt-6 flex items-center justify-center gap-2">
+            <span className="text-sm text-rodeo-gold font-medium">Cerveja Oficial:</span>
             <img 
-              src={imperioLogo} 
+              src="/lovable-uploads/82dc8f81-9fb7-431b-b059-3cba5cc2dab7.png"
               alt="Cervejaria Império" 
-              className="h-10"
-              onError={(e) => {
-                e.currentTarget.src = "https://via.placeholder.com/100x40/071507/E9AB17?text=IMPERIO";
-              }}
+              className="h-8 object-contain" 
+              style={{ maxWidth: "63px" }}
             />
           </div>
         </div>
@@ -116,16 +115,14 @@ const ProgramacaoSection = () => {
                 </Button>
               </div>
               
-              {/* Imperio sponsorship tag */}
-              <div className="absolute top-4 right-4 bg-black/80 py-1 px-3 rounded-full flex items-center border border-rodeo-gold/30">
-                <span className="text-xs text-rodeo-gold mr-1 font-medium">Apoio:</span>
+              {/* Imperio sponsorship tag NOVO */}
+              <div className="absolute top-4 right-4 bg-black/80 py-1 px-3 rounded-full flex items-center border border-rodeo-gold/30 gap-2">
+                <span className="text-xs text-rodeo-gold font-medium">Apoio:</span>
                 <img 
-                  src={imperioLogo} 
+                  src="/lovable-uploads/82dc8f81-9fb7-431b-b059-3cba5cc2dab7.png"
                   alt="Cervejaria Império" 
-                  className="h-5" 
-                  onError={(e) => {
-                    e.currentTarget.src = "https://via.placeholder.com/50x20/071507/E9AB17?text=IMPERIO";
-                  }}
+                  className="h-5 object-contain" 
+                  style={{ maxWidth: "38px" }}
                 />
               </div>
             </div>
