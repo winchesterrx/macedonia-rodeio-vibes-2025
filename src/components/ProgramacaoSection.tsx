@@ -1,6 +1,7 @@
 import { Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import novaLogoImperio from "../assets/logo-sfundo.png";
+import logoCerveja from "../assets/logo-sfundo.png";
+import logoApoio from "../assets/apoio-sfundo.png";
 import rodeioLogo from "../assets/logo-rodeio.png";
 
 interface ShowProps {
@@ -44,7 +45,6 @@ const ProgramacaoSection = () => {
 
   return (
     <section id="programacao" className="py-20 bg-rodeo-darker relative">
-      {/* Rope border top */}
       <div className="absolute top-0 left-0 w-full h-2 bg-gold-gradient opacity-80"></div>
 
       <div className="container mx-auto px-4">
@@ -57,19 +57,18 @@ const ProgramacaoSection = () => {
             Confira as grandes atrações que vão agitar as noites do Macedônia Rodeio Show 2025
           </p>
 
-          {/* Imagem personalizada da Cerveja Oficial */}
+          {/* Logo central Cerveja Oficial */}
           <div className="flex justify-center mt-6">
-  <img
-    src={novaLogoImperio}
-    alt="Cerveja Oficial: Império"
-    className="h-[48px]"
-    style={{
-      backgroundColor: "transparent",
-      mixBlendMode: "normal"
-    }}
-  />
-</div>
-
+            <img
+              src={logoCerveja}
+              alt="Cerveja Oficial: Império"
+              className="h-[48px]"
+              style={{
+                backgroundColor: "transparent",
+                mixBlendMode: "normal"
+              }}
+            />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -78,7 +77,6 @@ const ProgramacaoSection = () => {
               key={index}
               className="group relative overflow-hidden rounded-xl border-2 border-rodeo-gold/30"
             >
-              {/* Show image */}
               <div className="h-96 overflow-hidden">
                 <img
                   src={show.image}
@@ -87,7 +85,6 @@ const ProgramacaoSection = () => {
                 />
               </div>
 
-              {/* Event logo overlay */}
               <div className="absolute inset-0 flex items-center justify-center opacity-30 pointer-events-none">
                 <img
                   src={rodeioLogo}
@@ -99,10 +96,8 @@ const ProgramacaoSection = () => {
                 />
               </div>
 
-              {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-rodeo-dark via-rodeo-dark/80 to-transparent"></div>
 
-              {/* Content */}
               <div className="absolute bottom-0 left-0 w-full p-6">
                 <div className="flex items-center mb-3">
                   <Calendar size={18} className="text-rodeo-gold mr-2" />
@@ -121,14 +116,13 @@ const ProgramacaoSection = () => {
                 </Button>
               </div>
 
-              {/* Imperio sponsorship tag NOVO */}
-              <div className="absolute top-4 right-4 bg-black/80 py-1 px-3 rounded-full flex items-center border border-rodeo-gold/30 gap-2">
-                <span className="text-xs text-rodeo-gold font-medium">Apoio:</span>
+              {/* Logo apoio sem texto */}
+              <div className="absolute top-4 right-4 bg-black/80 py-1 px-3 rounded-full flex items-center border border-rodeo-gold/30">
                 <img
-                  alt="Cervejaria Império"
+                  src={logoApoio}
+                  alt="Apoio: Império"
                   className="h-5 object-contain"
-                  style={{ maxWidth: "38px" }}
-                  src="/lovable-uploads/ee8ac9df-1c43-40fb-b3bb-f4a5965b9f31.png"
+                  style={{ background: "transparent", maxWidth: "80px" }}
                 />
               </div>
             </div>
