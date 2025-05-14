@@ -1,6 +1,6 @@
 import { Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
-// import imperioLogo from "../assets/imperio-logo.png";
+import imperioLogo from "../assets/imperio-logo.png";
 import rodeioLogo from "../assets/logo-rodeio.png";
 
 interface ShowProps {
@@ -59,15 +59,15 @@ const ProgramacaoSection = () => {
 
           {/* Bloco Alinhado de Cerveja Oficial */}
           <div className="flex justify-center mt-6">
-            <div className="flex items-center gap-2 bg-rodeo-dark px-4 py-2 rounded-md border border-yellow-600">
-              <span className="text-sm text-rodeo-gold font-medium">Cerveja Oficial:</span>
-              <img
-                src="/src/assets/imperio-logo.png"
-                alt="Cerveja Império"
-                className="h-6 object-contain"
-              />
-            </div>
-          </div>
+  <div className="flex items-center gap-2 bg-rodeo-dark px-4 py-2 rounded-md border border-yellow-600">
+    <span className="text-sm text-rodeo-gold font-medium">Cerveja Oficial:</span>
+    <img
+      src={imperioLogo}
+      alt="Cerveja Império"
+      className="h-6 object-contain"
+    />
+  </div>
+</div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
