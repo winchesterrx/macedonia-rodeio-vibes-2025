@@ -1,6 +1,6 @@
 import { Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import imperioLogo from "../assets/imperio-logo.png";
+import novaLogoImperio from "../assets/nova-logo-imperio.png";
 import rodeioLogo from "../assets/logo-rodeio.png";
 
 interface ShowProps {
@@ -57,23 +57,14 @@ const ProgramacaoSection = () => {
             Confira as grandes atrações que vão agitar as noites do Macedônia Rodeio Show 2025
           </p>
 
-          {/* Bloco Alinhado de Cerveja Oficial */}
-     <div className="flex justify-center mt-6">
-  <div className="flex items-center gap-2 bg-rodeo-dark px-4 py-[6px] rounded-md border border-yellow-600 leading-none">
-    <span className="text-sm text-rodeo-gold font-medium leading-none whitespace-nowrap">
-      Cerveja Oficial:
-    </span>
-    <img
-      src={imperioLogo}
-      alt="Cerveja Império"
-      className="h-[20px] mt-[1px] object-contain"
-    />
-  </div>
-</div>
-
-
-
-
+          {/* Imagem personalizada da Cerveja Oficial */}
+          <div className="flex justify-center mt-6">
+            <img
+              src={novaLogoImperio}
+              alt="Cerveja Oficial: Império"
+              className="h-[48px] object-contain"
+            />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
