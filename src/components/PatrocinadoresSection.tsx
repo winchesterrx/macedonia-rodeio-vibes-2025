@@ -10,7 +10,7 @@ const PatrocinadoresSection = () => {
     tier: "master" // master, gold, silver
   }, {
     name: "Colégio Objetivo",
-    logo: "https://via.placeholder.com/200x100/222222/D4AF37?text=Objetivo",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1_BkcCESxiI6ziC-9P_ZpXDVP6BRy97vdAw&s",
     tier: "gold"
   }, {
     name: "Maxxi Hospitalar",
