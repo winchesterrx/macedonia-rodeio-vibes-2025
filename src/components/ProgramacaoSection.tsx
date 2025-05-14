@@ -59,12 +59,17 @@ const ProgramacaoSection = () => {
 
           {/* Imagem personalizada da Cerveja Oficial */}
           <div className="flex justify-center mt-6">
-            <img
-              src={novaLogoImperio}
-              alt="Cerveja Oficial: Império"
-              className="h-[48px] object-contain"
-            />
-          </div>
+  <img
+    src={novaLogoImperio}
+    alt="Cerveja Oficial: Império"
+    className="h-[48px]"
+    style={{
+      backgroundColor: "transparent",
+      mixBlendMode: "normal"
+    }}
+  />
+</div>
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
