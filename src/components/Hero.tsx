@@ -14,7 +14,7 @@ const Hero = () => {
     }
   };
   return <section id="home" className="min-h-screen relative flex items-center justify-center bg-cover bg-center text-white" style={{
-    backgroundImage: "linear-gradient(rgba(7, 21, 7, 0.85), rgba(7, 21, 7, 0.9)), url('https://images.unsplash.com/photo-1468818438311-4bab781ab9b8?q=80&w=2071')",
+    backgroundImage: "linear-gradient(rgba(7, 21, 7, 0.85), rgba(7, 21, 7, 0.9)), url('https://pin.it/5X4tSf1LN')",
     backgroundColor: "#071507"
   }}>
       <div className="absolute inset-0 bg-gradient-to-b from-rodeo-dark/90 via-rodeo-dark/95 to-rodeo-darker"></div>
