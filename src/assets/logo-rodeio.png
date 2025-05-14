@@ -1,6 +1,4 @@
 
-// (Substitua o logo antigo pelo novo upload em /src/assets/logo-rodeio.png)
-//
-// O arquivo está representado por este upload:
-// /lovable-uploads/03276840-4600-4c77-9175-778a068c5bab.png
-// Por favor, use esse caminho como a nova logo do rodeio
+// NOVA LOGO enviada pelo usuário.
+// Por questão do sistema, o caminho importado é '/lovable-uploads/d9f418e4-1e7d-479b-9978-eea4b88ced49.png'
+// Ao importar nos componentes, usaremos este caminho.

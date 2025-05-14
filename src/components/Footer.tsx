@@ -1,21 +1,27 @@
-
 import { Facebook, Instagram, Share2, Twitter } from "lucide-react";
-// Trocar logo
-import rodeioLogo from "/lovable-uploads/03276840-4600-4c77-9175-778a068c5bab.png";
+// Nova logo transparente
+import rodeioLogo from "/lovable-uploads/d9f418e4-1e7d-479b-9978-eea4b88ced49.png";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  return <footer className="bg-rodeo-darker pt-16 pb-8 text-white relative">
+  return (
+    <footer className="bg-rodeo-darker pt-16 pb-8 text-white relative">
       {/* Rope border top */}
       <div className="absolute top-0 left-0 w-full h-2 bg-gold-gradient opacity-80"></div>
-      
       <div className="container mx-auto px-4">
         <div className="flex justify-center mb-10">
-          <img src={rodeioLogo} alt="Macedônia Rodeio Show" className="max-h-28 mx-auto object-contain" style={{ background: "transparent" }}
-            onError={e => {
-              e.currentTarget.src = "https://via.placeholder.com/112x112/0D4F0D/E9AB17?text=RODEIO+SHOW";
-            }} />
+          <div className="bg-rodeo-dark/60 shadow-lg rounded-full px-8 py-6 flex items-center justify-center max-w-[225px] mx-auto gold-glow animate-fade-in">
+            <img
+              src={rodeioLogo}
+              alt="Macedônia Rodeio Show"
+              className="max-h-28 mx-auto object-contain"
+              style={{ background: "transparent", maxWidth: "170px" }}
+              onError={e => {
+                e.currentTarget.src =
+                  "https://via.placeholder.com/112x112/0D4F0D/E9AB17?text=RODEIO+SHOW";
+              }}
+            />
+          </div>
         </div>
-      
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* About */}
           <div>
@@ -113,6 +119,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
 export default Footer;

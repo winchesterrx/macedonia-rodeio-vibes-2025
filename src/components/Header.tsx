@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-// Trocar logo para a nova recebida e garantir alinhamento
-import rodeioLogo from "/lovable-uploads/03276840-4600-4c77-9175-778a068c5bab.png";
 import cervejaLogo from "../assets/cerveja-oficial.png";
+// Logo transparente nova!
+import rodeioLogo from "/lovable-uploads/d9f418e4-1e7d-479b-9978-eea4b88ced49.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,26 +32,29 @@ const Header = () => {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-rodeo-darker/95 shadow-md backdrop-blur-sm" : "bg-transparent"}`}>
+      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-rodeo-darker/95 shadow-md backdrop-blur-lg" : "bg-transparent"}`}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-3 flex items-center justify-between">
             {/* Logo + cerveja block alinhados centralizadamente */}
             <div className="flex items-center space-x-4">
-              <img 
-                src={rodeioLogo} 
-                alt="Macedônia Rodeio Show" 
-                className="h-14 md:h-16 object-contain"
-                style={{ background: "transparent" }}
-              />
-              {/* Cerveja Oficial alinhado verticalmente */}
-              <div className="hidden md:flex flex-row items-center gap-2 bg-rodeo-dark/70 rounded-lg border border-rodeo-gold/70 gold-glow px-4 py-2 min-w-[210px] max-w-[330px] ml-4 h-[48px]">
-                <span className="text-sm text-rodeo-gold font-semibold whitespace-nowrap">Cerveja Oficial:</span>
-                <img
-                  src={cervejaLogo}
-                  alt="Cerveja Oficial"
-                  className="h-8 md:h-9 ml-2 object-contain"
-                  style={{ maxWidth: "80px", marginTop: "0px" }}
+              <div className="backdrop-blur-md bg-rodeo-dark/70 rounded-xl shadow-md border-2 border-rodeo-gold/40 px-2 py-1 flex items-center gap-3 animate-fade-in">
+                <img 
+                  src={rodeioLogo} 
+                  alt="Macedônia Rodeio Show" 
+                  className="h-16 w-auto object-contain"
+                  style={{ background: "transparent" }}
                 />
+                {/* Bloco visual da cerveja oficial (destaque clean e badge) */}
+                <div className="flex flex-row items-center gap-2 bg-rodeo-darker/50 rounded-lg border border-rodeo-gold/40 gold-glow px-3 py-1 min-w-[130px] max-w-[150px] h-9 ml-2 glass shadow-sm">
+                  <span className="text-xs text-rodeo-gold font-semibold whitespace-nowrap">Cerveja Oficial</span>
+                  <span className="ml-1 px-2 py-[2px] bg-rodeo-gold/80 text-rodeo-dark rounded font-bold text-[10px]">parceria</span>
+                  <img
+                    src={cervejaLogo}
+                    alt="Cerveja Oficial"
+                    className="h-7 w-auto object-contain ml-2"
+                    style={{ maxWidth: "42px", marginTop: "0px" }}
+                  />
+                </div>
               </div>
             </div>
 
