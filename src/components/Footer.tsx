@@ -1,6 +1,7 @@
+
 import { Facebook, Instagram, Share2, Twitter } from "lucide-react";
-import imperioLogo from "../assets/imperio-logo.png";
-import rodeioLogo from "../assets/logo-rodeio.png";
+// Trocar logo
+import rodeioLogo from "/lovable-uploads/03276840-4600-4c77-9175-778a068c5bab.png";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return <footer className="bg-rodeo-darker pt-16 pb-8 text-white relative">
@@ -9,9 +10,10 @@ const Footer = () => {
       
       <div className="container mx-auto px-4">
         <div className="flex justify-center mb-10">
-          <img src={rodeioLogo} alt="Macedônia Rodeio Show" className="max-h-28 mx-auto" onError={e => {
-          e.currentTarget.src = "https://via.placeholder.com/112x112/0D4F0D/E9AB17?text=RODEIO+SHOW";
-        }} />
+          <img src={rodeioLogo} alt="Macedônia Rodeio Show" className="max-h-28 mx-auto object-contain" style={{ background: "transparent" }}
+            onError={e => {
+              e.currentTarget.src = "https://via.placeholder.com/112x112/0D4F0D/E9AB17?text=RODEIO+SHOW";
+            }} />
         </div>
       
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">

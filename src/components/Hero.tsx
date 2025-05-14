@@ -1,10 +1,7 @@
-
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import rodeioLogo from "../assets/logo-rodeio.png";
+import rodeioLogo from "/lovable-uploads/03276840-4600-4c77-9175-778a068c5bab.png";
 import CountdownTimer from "./CountdownTimer";
-
-// Corrigir caminho da logo da cerveja
 import cervejaLogo from "../assets/cerveja-oficial.png";
 
 const Hero = () => {
@@ -31,27 +28,28 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 z-10 py-10 md:pt-14 mt-8 lg:mt-20">
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
-          {/* Logo principal do evento */}
+          {/* Logo principal do evento e bloco da cerveja totalmente alinhados */}
           <div className="mb-4 md:mb-6 flex flex-col items-center gap-4 w-full">
-            <img 
-              src={rodeioLogo} 
-              alt="Macedônia Rodeio Show" 
-              className="mx-auto max-w-[260px] md:max-w-[320px] lg:max-w-[380px]"
-              style={{ filter: "drop-shadow(0 0 10px rgba(233, 171, 23, 0.7))" }}
-            />
-            {/* ALINHAR BLOCO DA CERVEJA COM A LOGO */}
-            <div className="flex flex-row items-center justify-center gap-2 bg-rodeo-dark/70 rounded-lg border border-rodeo-gold/70 gold-glow px-4 py-2 min-w-[210px] max-w-[330px] mx-auto">
-              <span className="text-sm text-rodeo-gold font-semibold whitespace-nowrap">Cerveja Oficial:</span>
+            <div className="flex flex-col md:flex-row md:items-center md:justify-center w-full gap-4">
               <img 
-                src={cervejaLogo}
-                alt="Cervejaria Oficial"
-                className="h-8 md:h-9 object-contain ml-2"
-                style={{maxWidth: "80px", marginTop: "0px"}}
+                src={rodeioLogo} 
+                alt="Macedônia Rodeio Show" 
+                className="mx-auto max-w-[260px] md:max-w-[320px] lg:max-w-[380px] object-contain"
+                style={{ filter: "drop-shadow(0 0 10px rgba(233, 171, 23, 0.7))", background: "transparent" }}
               />
+              <div className="flex flex-row items-center gap-2 bg-rodeo-dark/70 rounded-lg border border-rodeo-gold/70 gold-glow px-4 py-2 min-w-[210px] max-w-[330px] mx-auto h-[48px]">
+                <span className="text-sm text-rodeo-gold font-semibold whitespace-nowrap">Cerveja Oficial:</span>
+                <img 
+                  src={cervejaLogo}
+                  alt="Cervejaria Oficial"
+                  className="h-8 md:h-9 object-contain ml-2"
+                  style={{maxWidth: "80px", marginTop: "0px"}}
+                />
+              </div>
             </div>
           </div>
 
-          {/* CONTADOR MAIS EVIDENTE ABAIXO DO BLOCO LOGO+CERVEJA */}
+          {/* CONTADOR destacado abaixo da logo+cerveja */}
           <div className="w-full flex justify-center mt-4 mb-6">
             <CountdownTimer />
           </div>

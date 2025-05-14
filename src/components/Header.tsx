@@ -1,9 +1,8 @@
-
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import novaLogo from "../assets/WhatsApp_Image_2025-05-13_at_10.02.20-removebg-preview.png";
-// Corrigir caminho para cerveja oficial
+// Trocar logo para a nova recebida e garantir alinhamento
+import rodeioLogo from "/lovable-uploads/03276840-4600-4c77-9175-778a068c5bab.png";
 import cervejaLogo from "../assets/cerveja-oficial.png";
 
 const Header = () => {
@@ -36,15 +35,16 @@ const Header = () => {
       <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-rodeo-darker/95 shadow-md backdrop-blur-sm" : "bg-transparent"}`}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-3 flex items-center justify-between">
-            {/* Logo Area */}
+            {/* Logo + cerveja block alinhados centralizadamente */}
             <div className="flex items-center space-x-4">
               <img 
-                src={novaLogo} 
+                src={rodeioLogo} 
                 alt="Macedônia Rodeio Show" 
-                className="h-14 md:h-16"
+                className="h-14 md:h-16 object-contain"
+                style={{ background: "transparent" }}
               />
-              {/* ALINHAR BLOCO DA CERVEJA COM A LOGO – APENAS NA DESKTOP */}
-              <div className="hidden md:flex flex-row items-center gap-2 bg-rodeo-dark/70 rounded-lg border border-rodeo-gold/70 gold-glow px-4 py-2 min-w-[210px] max-w-[330px] ml-4">
+              {/* Cerveja Oficial alinhado verticalmente */}
+              <div className="hidden md:flex flex-row items-center gap-2 bg-rodeo-dark/70 rounded-lg border border-rodeo-gold/70 gold-glow px-4 py-2 min-w-[210px] max-w-[330px] ml-4 h-[48px]">
                 <span className="text-sm text-rodeo-gold font-semibold whitespace-nowrap">Cerveja Oficial:</span>
                 <img
                   src={cervejaLogo}
